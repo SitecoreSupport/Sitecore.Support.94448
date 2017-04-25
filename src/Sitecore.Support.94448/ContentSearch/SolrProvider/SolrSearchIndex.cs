@@ -10,6 +10,10 @@ namespace Sitecore.Support.ContentSearch.SolrProvider
         {
         }
 
+        public SolrSearchIndex(string name, string core, IIndexPropertyStore propertyStore, string group) : base(name, core, propertyStore, group)
+        {
+        }
+
         public override IProviderSearchContext CreateSearchContext(SearchSecurityOptions options = SearchSecurityOptions.Default)
         {
             if (this.Group == IndexGroup.Experience)
