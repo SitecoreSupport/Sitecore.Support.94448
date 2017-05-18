@@ -1,8 +1,6 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 using Sitecore.ContentSearch;
-using Sitecore.ContentSearch.Abstractions;
 using Sitecore.ContentSearch.Diagnostics;
 using Sitecore.ContentSearch.Linq.Common;
 using Sitecore.ContentSearch.Pipelines;
@@ -15,7 +13,7 @@ namespace Sitecore.Support.ContentSearch.SolrProvider
 {
     public class SolrSearchContext : Sitecore.ContentSearch.SolrProvider.SolrSearchContext, IProviderSearchContext, IDisposable
     {
-        public SolrSearchContext(Sitecore.ContentSearch.SolrProvider.SolrSearchIndex index, SearchSecurityOptions options) : base(index, options)
+        public SolrSearchContext(Sitecore.ContentSearch.SolrProvider.SolrSearchIndex index, SearchSecurityOptions options = SearchSecurityOptions.Default) : base(index, options)
         {
         }
 
